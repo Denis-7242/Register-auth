@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Web Auth</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #4e54c8, #8f94fb);
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        flex-direction: column;
+        text-align: center;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      button {
+        background: #6c63ff;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 10px;
+        color: white;
+        font-weight: 600;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #857fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎉 Welcome to Your Home Page!</h1>
+    <p>You are successfully logged in.</p>
+    <button id="logoutBtn">Logout</button>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+      import {
+        getAuth,
+        signOut,
+      } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAq3RQ0lYCDNGibYDY710ei7JFkqc5gnN8",
+        authDomain: "authentication-web-3062c.firebaseapp.com",
+        projectId: "authentication-web-3062c",
+        storageBucket: "authentication-web-3062c.firebasestorage.app",
+        messagingSenderId: "837860907073",
+        appId: "1:837860907073:web:36ec2d83c6791896ea8ec0",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+
+      const logoutBtn = document.getElementById("logoutBtn");
+      logoutBtn.addEventListener("click", () => {
+        signOut(auth).then(() => {
+          alert("You have been logged out.");
+          window.location.href = "login.html";
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Web Auth</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      }
+      .login-container {
+        width: 360px;
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 20px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        padding: 40px 35px;
+        color: #fff;
+      }
+      h2 {
+        text-align: center;
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      .input-box {
+        position: relative;
+        margin: 20px 0;
+      }
+      .input-box input {
+        width: 100%;
+        padding: 12px 16px;
+        border: none;
+        outline: none;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        color: #fff;
+        font-size: 15px;
+      }
+      .input-box label {
+        position: absolute;
+        top: 12px;
+        left: 16px;
+        color: #ddd;
+        font-size: 14px;
+        pointer-events: none;
+        transition: 0.3s;
+      }
+      .input-box input:focus + label,
+      .input-box input:valid + label {
+        top: -10px;
+        left: 10px;
+        font-size: 12px;
+        color: #fff;
+      }
+      button {
+        width: 100%;
+        background: #6c63ff;
+        border: none;
+        padding: 12px;
+        border-radius: 10px;
+        color: #fff;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      button:hover {
+        background: #857fff;
+        transform: scale(1.05);
+      }
+      p {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 15px;
+      }
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Welcome Back</h2>
+      <form id="loginForm">
+        <div class="input-box">
+          <input type="email" id="email" required />
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <input type="password" id="password" required />
+          <label>Password</label>
+        </div>
+        <button type="submit">Login</button>
+        <p>Don’t have an account? <a href="index.html">Register</a></p>
+      </form>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+      import {
+        getAuth,
+        signInWithEmailAndPassword,
+      } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAq3RQ0lYCDNGibYDY710ei7JFkqc5gnN8",
+        authDomain: "authentication-web-3062c.firebaseapp.com",
+        projectId: "authentication-web-3062c",
+        storageBucket: "authentication-web-3062c.firebasestorage.app",
+        messagingSenderId: "837860907073",
+        appId: "1:837860907073:web:36ec2d83c6791896ea8ec0",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+
+      const loginForm = document.getElementById("loginForm");
+      loginForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        try {
+          await signInWithEmailAndPassword(auth, email, password);
+          alert("Login successful!");
+          window.location.href = "Home.html";
+        } catch (error) {
+          alert("Error: " + error.message);
+        }
+      });
+    </script>
+  </body>
+</html>
