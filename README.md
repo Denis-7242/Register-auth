@@ -442,18 +442,11 @@ Contributions are welcome! If you'd like to improve this project:
 ## 👤 Author
 
 **Denis**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Portfolio: [yourwebsite.com](https://yourwebsite.com)
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
+- GitHub: [@yourusername](https://github.com/Denis-7242)
+- Email: dexdenis3@gmail.com
 
 ---
 
-<div align="center">
-
-**Made with ❤️ by Denis**
-
-</div>
 
 ## 📄 License
 
@@ -513,6 +506,8 @@ SOFTWARE.
 ⭐ **If you found this project helpful, please give it a star!** ⭐
 
 💜 **Made with Firebase Authentication and Modern CSS** 💜
+
+   **Made with ❤️ by Denis**
 
 🔥 **Happy Coding!** 🔥
 
