@@ -442,7 +442,7 @@ Contributions are welcome! If you'd like to improve this project:
 ## 👤 Author
 
 **Denis**
-- GitHub: [@yourusername](https://github.com/Denis-7242)
+- GitHub: [@Denis-7242](https://github.com/Denis-7242)
 - Email: dexdenis3@gmail.com
 
 ---
