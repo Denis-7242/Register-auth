@@ -482,23 +482,6 @@ SOFTWARE.
 - **Google Fonts** - For the beautiful Poppins font family
 - **The Developer Community** - For inspiration and best practices
 
-## 📸 Screenshots
-
-### Registration Page
-*Glassmorphism design with animated floating labels*
-
-![Registration Page](https://via.placeholder.com/800x500/4e54c8/ffffff?text=Registration+Page+-+Create+Account)
-
-### Login Page
-*Clean, consistent UI matching the registration experience*
-
-![Login Page](https://via.placeholder.com/800x500/4e54c8/ffffff?text=Login+Page+-+Welcome+Back)
-
-### Homepage
-*Simple welcome screen with logout functionality*
-
-![Homepage](https://via.placeholder.com/800x500/4e54c8/ffffff?text=Homepage+-+Welcome)
-
 ---
 
 <div align="center">
