@@ -60,7 +60,8 @@ firebase-auth-web/
    ```
    → Go to https://console.firebase.google.com/
    → Click "Add Project"
-   → Enter project name (e.g., "authentication-web-3062c")
+   → Enter project name (e.g., "authentication-web-3062c" or a name of your choice)
+   → Enable Google gemini (optional)
    → Disable Google Analytics (optional)
    → Click "Create Project"
    ```
